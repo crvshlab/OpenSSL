@@ -34,7 +34,7 @@ github "krzyzanowskim/OpenSSL"
 
 The latest version of OpenSSL at the time of writing is 1.1.1d. You can change which version to build in `build.sh`, see `OPENSSL_VERSION`. This version requires a small patch to prevent the Xcode error _non-modular include in framework_. This is because `include <inttypes.h>` is not applicable on iOS and OS X, instead `include <stdint.h>` should be used.
 
-### Building OpenSSL
+##### Building OpenSSL
 
 1. Run `./build.sh` to build OpenSSL.
 1. Apply the patch using `apply e_os2.patch`. Note: this step may not be required for future versions of OpenSSL.
