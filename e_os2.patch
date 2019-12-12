@@ -1,0 +1,16 @@
+diff --git a/ios/include/openssl/e_os2.h b/ios/include/openssl/e_os2.h
+index 97a776c..5e92b73 100644
+--- a/ios/include/openssl/e_os2.h
++++ b/ios/include/openssl/e_os2.h
+@@ -237,9 +237,9 @@ typedef INT32 int32_t;
+ typedef UINT32 uint32_t;
+ typedef INT64 int64_t;
+ typedef UINT64 uint64_t;
+-# elif (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || \
++# elif ((defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || \
+      defined(__osf__) || defined(__sgi) || defined(__hpux) || \
+-     defined(OPENSSL_SYS_VMS) || defined (__OpenBSD__)
++     defined(OPENSSL_SYS_VMS) || defined (__OpenBSD__)) && (!defined(OPENSSL_SYS_iOS) && !defined(OPENSSL_SYS_MACOSX))
+ #  include <inttypes.h>
+ # elif defined(_MSC_VER) && _MSC_VER<=1500
+ /*
