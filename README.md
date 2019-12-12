@@ -42,7 +42,7 @@ This is because `include <inttypes.h>` is not applicable on iOS and OS X, instea
 
 1. Run `./build.sh` to build OpenSSL.
 1. Apply the patch using `apply e_os2.patch`. Note: this step may not be required for future versions of OpenSSL.
-1. Run `./create_frameworks.sh
+1. Run `./create_frameworks.sh`
 
 You should now be able to use those frameworks directly in projects. Once you're happy that it works, you can push to this repo and tag the version. All projects using Carthage can then be updated individually.
 
