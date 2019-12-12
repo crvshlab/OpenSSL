@@ -32,7 +32,11 @@ github "krzyzanowskim/OpenSSL"
 
 #### Building and Updating
 
-The latest version of OpenSSL at the time of writing is 1.1.1d. You can change which version to build in `build.sh`, see `OPENSSL_VERSION`. This version requires a small patch to prevent the Xcode error _non-modular include in framework_. This is because `include <inttypes.h>` is not applicable on iOS and OS X, instead `include <stdint.h>` should be used.
+The latest version of OpenSSL at the time of writing is 1.1.1d. You can change which version to build in `build.sh`, see `OPENSSL_VERSION`. This version requires a small patch to prevent the Xcode error:
+
+> Include of non-modular include in framework module 'OpenSSL.e_os2: ...
+
+This is because `include <inttypes.h>` is not applicable on iOS and OS X, instead `include <stdint.h>` should be used.
 
 ##### Building OpenSSL
 
