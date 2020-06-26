@@ -12,7 +12,6 @@
 static inline void OpenSSL_SSL_init(void) {
     SSL_library_init();
     SSL_load_error_strings();
-    ERR_load_crypto_strings();
     OPENSSL_config(NULL);
     OpenSSL_add_all_ciphers();
     OPENSSL_add_all_algorithms_noconf();
