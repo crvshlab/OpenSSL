@@ -1,3 +1,12 @@
+# ‼️ Warning on the latest changes ‼️
+
+
+When fixing the app store submission problem https://github.com/crvshlab/v-app-ios/pull/1152, https://github.com/crvshlab/OpenSSL/commit/431dc203408b27ba74c6751bad528d6c1d35e620 the following irregularities were observed:
+1. The patch wasn't needed
+2. Not only the binary and Info.plist changed, but also some headers.
+
+This likely means that a newer OpenSSL version was used, but I have no idea which one. Since no one is using MQTT/OpenSSL, I'll think about it tomorrow™.
+
 # OpenSSL-Universal
 
 OpenSSL CocoaPod and Carthage for iOS and OSX. Complete solution to OpenSSL on iOS and OSX. Package came with precompiled libraries, and include script to build newer version if necessary.
